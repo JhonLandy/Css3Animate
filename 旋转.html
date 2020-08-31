@@ -1,0 +1,107 @@
+<!doctype html>		
+<html lang='en'>		
+ <head>									
+	<meta charset="UTF-8">				
+	<meta name="Author" content="小芊">	
+	<meta name="Keywords" content="">	
+	<meta name="Description" content="">
+	<title>猪头饼</title>		
+	<style>
+		*{margin:0;padding:0;}
+		.box{
+			width:800px;
+			height:400px;
+			margin:50px auto;
+			perspective:200px;
+		}
+		ul{
+			width:600px;
+			height:400px;
+			position: relative;
+			margin: auto;
+			transform-style: preserve-3d;
+			transform-origin: center center 100px;
+			animation:abc 20s infinite ;
+			transform:rotateY(0deg) translateZ(400px);
+		}
+
+		@keyframes abc{
+			0,25%{
+				transform:rotateY(0deg) translateZ(400px);
+			}
+			26%,50%{
+				transform:rotateY(90deg) translateZ(400px);
+			}
+			51%,75%{
+				transform:rotateY(180deg) translateZ(400px);
+			}
+            76%,90%{
+				transform:rotateY(270deg) translateZ(400px);
+			} 
+			91%,100%{
+				transform:rotateY(360deg) translateZ(400px);
+			}
+		}
+		li{
+			position:absolute;
+			list-style:none;
+			width:600px;
+			height:400px;
+			opacity:0.5;
+		
+		}
+		li:nth-child(1){
+			background:#ffff00;
+			
+		}
+		li:nth-child(2){
+			background:#ff6600;
+			left:-600px;
+			transform:rotateY(-90deg);
+			transform-origin:right;
+		}
+		li:nth-child(3){
+			background:#660000;
+			left:600px;
+			transform:rotateY(90deg);
+			transform-origin:left;
+		}
+		li:nth-child(4){
+			background:#66ff00;
+			top:-600px;
+			height:600px;
+			transform:rotateX(90deg);
+			transform-origin:bottom;
+		}
+		li:nth-child(5){
+			background:#996699;
+			top:400px;
+			height:600px;
+			transform:rotateX(-90deg);
+			transform-origin:top;
+		}
+		li:nth-child(6){
+			background:#cc0000;
+			transform:translateZ(-600px);
+		}
+		img{
+			display:block;
+			width:600px;
+			height:400px;
+		}
+	</style>
+ </head>
+ <body>									<!--网页主体:可视化区域-->
+ <div class='box'>
+		<ul>
+			<li><img src="images/5.jpg" ></li>
+			<li><img src="images/7.jpg" ></li>
+			<li><img src="images/3.jpg" ></li>
+			<li><img src="images/1.jpg" ></li>
+			<li><img src="images/2.jpg" ></li>
+			<li><img src="images/6.jpg" ></li>
+		</ul>
+	</div>
+ </body>
+ 
+</html>
